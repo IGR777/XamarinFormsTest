@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                        
+             xmlns:local="clr-namespace:App17.ViewModels;assembly=App17"
+             x:Class="App17.Pages.UsersPage">
+  <ListView ItemsSource="{Binding Users}" ItemTapped="OnItemTapped">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Horizontal" Padding="10">
+            <Label Text="{Binding Name}"/>
+            <Label Text="{Binding Result}"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Text="Add New" Clicked="OnAddTapped" />
+  </ContentPage.ToolbarItems>
+</ContentPage>
